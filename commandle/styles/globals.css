@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+table {
+  margin: 0px auto 30px auto;
+  width: 50%;
+  scale: 1.2;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  border-spacing: 0;
+  border-collapse: separate;
+  border-radius: 5px;
+  --border: solid black 1px;
+  border: var(--border);
+  overflow: hidden;
+  z-index: 10;
+}
+
+
+th {
+  width: 5%;
+}
+
+.hint tr:nth-child(odd) {
+  background-color: rgb(189, 189, 189);
+}
+
+.hint tr:nth-child(even) {
+  background-color: rgb(215, 209, 209);
+}
+
+.hint-win tr:nth-child(odd) {
+    background-color: rgb(112, 197, 78);
+  }
+  
+.hint-win tr:nth-child(even) {
+    background-color: rgb(216, 247, 207);
+  }
+
+.blur, .unblur {
+  margin: 10px auto;
+}
+
+.blur {
+  filter: blur(.75rem) grayscale(100%);
+}
+
+.win {
+  position: absolute;
+  margin: auto auto;
+  background-color: antiquewhite;
+  height: 400px;
+  width: 400px;
+}
+
+h3 {
+  margin: 0px auto;
+  padding: 25px 0px 5px 0px;
+  font-family: "Bebas Neue";
+  font-size: larger;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "custom";
+  src: url("../components/YellowMagician.ttf");
+}
+
+h1 {
+  margin: auto auto 50px auto;
+  font-family: "custom", sans-serif;;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.search {
+  align-items: center;
+}
+
+.App {
+  text-align: center;
+}
+
+.guess--image {
+  transition: .2s;
+}
+
+
